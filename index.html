@@ -107,6 +107,25 @@
         .section-header div:hover {
             background: #86BB22; /* Change to green on hover */
         }
+        /* Org Chart Styles */
+        .org-chart {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .department {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+            text-align: center;
+        }
+        .department h3 {
+            color: #299E8E;
+        }
         /* Responsive Design */
         @media (max-width: 600px) {
             h1 {
@@ -124,6 +143,13 @@
             }
             .section-header div {
                 font-size: 1.2em; /* Slightly smaller on mobile */
+            }
+            .org-chart {
+                flex-direction: column; /* Stack departments vertically on small screens */
+            }
+            .department {
+                flex-basis: auto; /* Reset flex-basis on small screens */
+                margin: 5px 0; /* Reduced margin */
             }
         }
         .icon {
@@ -201,6 +227,34 @@
     <div class="footer">
         Zuständige Geschäftsleitung: Florian Stäwen<br>
         <a href="https://www.greenit.systems/" target="_blank">www.greenit.systems</a>
+    </div>
+</div>
+
+<h3>Organigramm</h3>
+<div class="org-chart">
+    <div class="department">
+        <h3>Financial</h3>
+        <a href="link_to_financial_department"><img src="link_to_qr_code" alt="QR Code for Financial Department" width="100"></a>
+        <p>Sven Ricke</p>
+        <p>Patrick Flak</p>
+    </div>
+    <div class="department">
+        <h3>Sales</h3>
+        <a href="link_to_sales_department"><img src="link_to_qr_code" alt="QR Code for Sales Department" width="100"></a>
+        <p>Name 1</p>
+        <p>Name 2</p>
+    </div>
+    <div class="department">
+        <h3>Information</h3>
+        <a href="link_to_information_department"><img src="link_to_qr_code" alt="QR Code for Information Department" width="100"></a>
+        <p>Name 1</p>
+        <p>Name 2</p>
+    </div>
+    <div class="department">
+        <h3>Technical</h3>
+        <a href="link_to_technical_department"><img src="link_to_qr_code" alt="QR Code for Technical Department" width="100"></a>
+        <p>Name 1</p>
+        <p>Name 2</p>
     </div>
 </div>
 
